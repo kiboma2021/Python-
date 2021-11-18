@@ -23,3 +23,5 @@ Extras:
     Write this in one line of Python.
     Ask the user for a number and return a list that contains only elements from the original list a that are smaller than that number given by the user.
 
+
+4. Create a program that asks the user for a number and then prints out a list of all the divisors of that number.
