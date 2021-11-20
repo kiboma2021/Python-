@@ -166,14 +166,21 @@ Keep track of how many guesses the user has taken, and when the game ends, print
 
 
 solution:
-    #random.randrange(begin, end, step counter)
-    #randint() function is somewhat similar to the randrange()
-    #Randint() has two mandatory arguments: start and stop
-    #It has an inclusive range, i.e., can return both endpoints as the random output.
-    #random.random()- Generate random float number between 0 and 1
-    #Seed() to repeat a random number
 
     import random
+    
+    #random.randrange(begin, end, step counter)
+
+    #randint() function is somewhat similar to the randrange()
+
+    #Randint() has two mandatory arguments: start and stop
+
+    #It has an inclusive range, i.e., can return both endpoints as the random output.
+
+    #random.random()- Generate random float number between 0 and 1
+
+    #Seed() to repeat a random number
+
 
     #print("First Random Number: ", random.randrange(0, 100, 1)) #excludes zero and 100
 
