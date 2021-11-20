@@ -158,3 +158,16 @@ Solution:
             sys.exit()
 
     print(compare(user1_answer, user2_answer))
+
+9. Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right.
+
+Keep the game going until the user types “exit”
+Keep track of how many guesses the user has taken, and when the game ends, print this out.
+
+
+solution:
+    #random.randrange(begin, end, step counter)
+    #randint() function is somewhat similar to the randrange()
+    #Randint() has two mandatory arguments: start and stop
+    #It has an inclusive range, i.e., can return both endpoints as the random output.
+    #random.random()- Generate random float number between 0 and 1
