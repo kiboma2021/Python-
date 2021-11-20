@@ -171,3 +171,55 @@ solution:
     #Randint() has two mandatory arguments: start and stop
     #It has an inclusive range, i.e., can return both endpoints as the random output.
     #random.random()- Generate random float number between 0 and 1
+    #Seed() to repeat a random number
+
+    import random
+
+    #print("First Random Number: ", random.randrange(0, 100, 1)) #excludes zero and 100
+
+    #print("second Random Number: ", random.randrange(0, 100)) #includes zero and 100
+
+    #print("Third Random Number: ", random.random()) #radom number between 0 and 1
+
+    #random.seed(4)
+    #print("Generate Fourth Random Number: ", random.random())
+    #random.seed(5)
+    #print("Repeat Fourth Random Number: ", random.random())
+
+    #print("Generate fifth Random Float Number: ", random.uniform(10, 100))
+    #print("Generate sixth Random Float Number: ", random.uniform(10, 100))
+
+    x=random.randint(1,9)
+    userinput=input("Guess a number between 1-9:")
+
+    a=0
+    b=0
+    c=0
+
+    while userinput !='exit':
+
+        userinput=int(userinput)
+        if userinput>1 and userinput<=9:
+            print("random number is", x)
+                
+            if x==userinput:
+                print("Your guess is correct")
+                a=a+1
+
+            elif x<userinput:
+                print("Your guess is too high")
+                b=b+1
+            else:
+                print("Your guess is too low")
+                b=b+1
+
+        else:
+            print("incorrect input")
+            c=c+1
+
+        x=random.randint(1,9)
+        userinput=input("Guess a number between 1-9:")
+
+    print("Number of correct attempts:", a)
+    print("Number of incorrect attemts:", b)
+    print("Number of incorrect inputs:", c)
