@@ -230,3 +230,20 @@ solution:
     print("Number of correct attempts:", a)
     print("Number of incorrect attemts:", b)
     print("Number of incorrect inputs:", c)
+
+10. Ask the user for a number and determine whether the number is prime or not.
+
+solution:
+    import sys
+
+    def get_integer(help_text="Give a number: "):
+
+        return int(input(help_text))
+
+    num = get_integer()
+
+    for i in range(2,num-1):
+        if (num%i)==0:
+            sys.exit("The number is not prime")
+
+    print("Number is prime")
