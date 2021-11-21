@@ -234,8 +234,8 @@ solution:
 10. Ask the user for a number and determine whether the number is prime or not.
 
 solution:
-    import sys
 
+    import sys
     def get_integer(help_text="Give a number: "):
 
         return int(input(help_text))
