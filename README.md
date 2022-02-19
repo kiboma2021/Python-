@@ -312,9 +312,13 @@ The year is also evenly divisible by 400. Then it is a leap year.
             leap = False
             
             # Write your logic here
-            if year%100==0 and year%400==0 and year%4==0:
+            if year%4==0:
                 leap=True
-            
+                if year%100==0:
+                    leap=False
+                if year%400==0:
+                    leap=True        
+                
             return leap
 
         year = int(input())
