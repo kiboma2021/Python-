@@ -308,18 +308,43 @@ The year can be evenly divided by 4, is a leap year, unless:
 The year can be evenly divided by 100, it is NOT a leap year, unless:
 The year is also evenly divisible by 400. Then it is a leap year.
 
-        def is_leap(year):
-            leap = False
+    def is_leap(year):
+        leap = False
+        
+        # Write your logic here
+        if year%4==0:
+            leap=True
+            if year%100==0:
+                leap=False
+            if year%400==0:
+                leap=True        
             
-            # Write your logic here
-            if year%4==0:
-                leap=True
-                if year%100==0:
-                    leap=False
-                if year%400==0:
-                    leap=True        
-                
-            return leap
+        return leap
 
-        year = int(input())
-        print(is_leap(year))
+    year = int(input())
+    print(is_leap(year))
+
+16. ABCXYZ company has up to  employees.
+The company decides to create a unique identification number (UID) for each of its employees.
+The company has assigned you the task of validating all the randomly generated UIDs.
+
+A valid UID must follow the rules below:
+
+It must contain at least  uppercase English alphabet characters.
+It must contain at least  digits (0-9 ).
+It should only contain alphanumeric characters (A -Z ,  a-z  & 0 -9 ).
+No character should repeat.
+There must be exactly 10 characters in a valid UID.
+
+        import re
+        for i in range(int(input())):
+            N = input().strip()
+            N = "".join(sorted(N))
+            if (re.search(r"[A-Z]{2}",N) and #2 uppercase alphabets
+                re.search(r"\d{3}",N) and #3+ digits
+                not re.search(r"[^A-Za-z0-9]",N) and #no                              nonalphanumeric
+                not re.search(r"(\w)\1",N) and #no repetition
+                len(N) == 10): #10 characters long
+                print("Valid")
+            else:
+                print("Invalid")
