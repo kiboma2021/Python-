@@ -280,7 +280,7 @@ solution:
 13. Write a program (function!) that takes a list and returns a new list that contains all the elements of the first list minus all the duplicates.
 
 
-14. Given an integer, , perform the following conditional actions:
+14. Given an integer,n , perform the following conditional actions:
 
 If  is odd, print Weird
 If  is even and in the inclusive range of  to , print Not Weird
@@ -299,4 +299,23 @@ If  is even and greater than , print Not Weird
             print("Weird")
         if n%2==0 and n>20:
             print("Not Weird")
-        
+
+15. An extra day is added to the calendar almost every four years as February 29, and the day is called a leap day. It corrects the calendar for the fact that our planet takes approximately 365.25 days to orbit the sun. A leap year contains a leap day.
+
+In the Gregorian calendar, three conditions are used to identify leap years:
+
+The year can be evenly divided by 4, is a leap year, unless:
+The year can be evenly divided by 100, it is NOT a leap year, unless:
+The year is also evenly divisible by 400. Then it is a leap year.
+
+        def is_leap(year):
+            leap = False
+            
+            # Write your logic here
+            if year%100==0 and year%400==0 and year%4==0:
+                leap=True
+            
+            return leap
+
+        year = int(input())
+        print(is_leap(year))
