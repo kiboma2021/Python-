@@ -433,3 +433,17 @@ It must NOT have 4 or more consecutive repeated digits.
             print("Success")
         else:
             print("Failed")
+
+22. Check if the word foo is not at the beginning of a word
+
+        import re
+
+        partten=r"\Bfoo"
+        txt="I love african ccfootball"
+
+        x=re.findall(partten,txt)
+
+        if x:
+            print("Success")
+        else:
+            print("Failed")
