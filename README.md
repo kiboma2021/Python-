@@ -377,3 +377,59 @@ It must NOT have 4 or more consecutive repeated digits.
                     print('Valid')
             else:
                 print('Invalid')
+
+18. check if a string starts with 'a' and ends with 's' and has 5 characters
+
+        import re
+
+        parten='^a...s$'
+        string_name='abyss'
+        result=re.match(parten,string_name)
+
+        if result:
+            print("correct")
+        else:
+            print("Wrong")
+
+19. Check if a string starts with 'yes'
+
+        import re
+
+        partten='\Ayes'
+        text_string1="yes i can"
+        text_string2="no. i cant yes"
+
+        result=re.findall(partten,text_string1)
+
+        if result:
+            print("Success")
+            
+        else:
+            print("Failed")
+
+20. check if the 'foo' is at the beginning of a word
+
+        import re
+
+        partten_1=r"\bfoo"
+        txt="I love football"
+
+        result=re.findall(partten_1,txt)
+
+        if result:
+            print("success")
+        else:
+            print("Failed"
+
+21. Check if the word foo is at the end of a word
+
+        import re
+
+        partten1=r"foo\b"
+        text="I love african football isfoo"
+        x=re.findall(partten1,text)
+
+        if x:
+            print("Success")
+        else:
+            print("Failed")
